@@ -1,13 +1,16 @@
 import styles from './Column.module.scss'
 
-const Column = () => {
+const Column = (props) => {
+  const {title} = props;
+  
   return (
-    <div className={styles.column}>
-      <article className={styles.column}></article>
-      <h2 className={styles.title}>Books</h2>
-    </div>  
+    <article className={styles.column}>
+      <h2 className={styles.title}> 
+        <span className={styles.icon + ' fa fa-' + props.icon} />
+        { title } 
+      </h2>
+    </article>
   )
-
 }
 
 export default Column;
