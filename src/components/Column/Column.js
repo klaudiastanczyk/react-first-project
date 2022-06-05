@@ -4,7 +4,7 @@ import CardForm from '../CardForm/CardForm';
 
 const Column = (props) => {
   const {title} = props;
-  
+  console.log(props.action)
   return (
     <article className={styles.column}>
       <h2 className={styles.title}> 
