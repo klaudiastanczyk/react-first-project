@@ -8,7 +8,7 @@ import { useDispatch } from 'react-redux';
 const CardForm = props => {
     const [title, setTitle] = useState('');
     const dispatch = useDispatch();
-    const columnId = props.columnId
+    const columnId = props.columnId;
 
     const handleSubmit = e => {
         e.preventDefault();
