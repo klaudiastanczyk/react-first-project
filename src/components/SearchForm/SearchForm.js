@@ -7,7 +7,7 @@ import { useState } from 'react';
 const SearchForm = (props) => {
     const [userText, checkUserText] = useState('');
     const dispatch = useDispatch();
-    dispatch({ type: 'UPDATE_SEARCHSTRING', payload: { userText } })
+    dispatch({ type: 'UPDATE_SEARCHSTRING', payload: userText })
 
     return (
         <form className={styles.searchForm}>
