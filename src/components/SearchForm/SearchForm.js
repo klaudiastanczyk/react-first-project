@@ -8,15 +8,12 @@ import { updateSearchform } from '../../redux/store';
 const SearchForm = (props) => {
     const [userText, checkUserText] = useState('');
     const dispatch = useDispatch();
-    const changeHandler = e => {
-        checkUserText(e.target.value);
-        dispatch(updateSearchform(userText));
-        }
+    dispatch(updateSearchform( userText ))
 
     return (
         <form className={styles.searchForm}>
             <TextInput placeholder={!props.children ?  'Search...' : props.children} 
-                value={userText} onChange={ changeHandler } />
+                value={userText} onChange={e => checkUserText(e.target.value)} />
             <Button><span className="fa fa-search" /> Search</Button>
         </form>
     );
