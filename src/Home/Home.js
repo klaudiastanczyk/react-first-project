@@ -4,11 +4,11 @@ import List from '../components/List/List'
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Hero />
       <SearchForm />
       <List />
-    </div> 
+    </> 
   )
 }
 
